@@ -81,28 +81,30 @@ const Home = () => {
   };
 
   return (
-    <div className="font-bold w-screen  bg-slate-50 rounded-lg shadow-md min-h-screen flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-white to-slate-100 text-gray-800">
       <Navbar cart={cart} />
       {/* Filter and Search */}
-      <div className="flex flex-col md:flex-row justify-between items-center px-4 py-4 gap-4 mt-20">
-        <input
-          type="text"
-          placeholder="Search products..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="border px-4 py-2 rounded w-full md:w-1/2"
-        />
-        <select
-          value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
-          className="border px-4 py-2 rounded w-full md:w-1/4"
-        >
-          {categories.map((cat) => (
-            <option key={cat} value={cat}>
-              {cat}
-            </option>
-          ))}
-        </select>
+      <div className="bg-white shadow-sm py-6 px-4 sm:px-6 lg:px-8 rounded-lg max-w-5xl mx-auto mb-6 mt-20">
+        <div className="flex flex-col md:flex-row gap-4 md:items-center justify-between">
+          <input
+            type="text"
+            placeholder="Search products..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="border px-4 py-2 rounded w-full md:w-1/2"
+          />
+          <select
+            value={selectedCategory}
+            onChange={(e) => setSelectedCategory(e.target.value)}
+            className="border px-4 py-2 rounded w-full md:w-1/4"
+          >
+            {categories.map((cat) => (
+              <option key={cat} value={cat}>
+                {cat}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       {/* Products */}
