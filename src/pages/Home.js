@@ -84,7 +84,7 @@ const Home = () => {
     <div className="font-bold w-screen  bg-slate-50 rounded-lg shadow-md min-h-screen flex flex-col">
       <Navbar cart={cart} />
       {/* Filter and Search */}
-      <div className="flex flex-col md:flex-row justify-between items-center px-4 py-4 gap-4">
+      <div className="flex flex-col md:flex-row justify-between items-center px-4 py-4 gap-4 mt-20">
         <input
           type="text"
           placeholder="Search products..."
